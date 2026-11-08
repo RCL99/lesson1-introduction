@@ -47,7 +47,7 @@ def tensor_operations():
 
 
 def indexing_and_slicing():
-    """Задание 1.3: индексация и срезы"""
+    """Задание 1.3: индексы и срезы"""
     tensor = torch.tensor(np.arange(125).reshape(5, 5, 5))
 
     first_row = tensor[0, 0, :]
@@ -94,21 +94,25 @@ def print_tensor(name, tensor):
 
 
 def main():
-    print("--1.1--")
+    print("---1.1---")
     for name, tensor in create_tensors().items():
         print_tensor(name, tensor)
+    print('\n')
 
-    print("--1.2--")
+    print("---1.2---")
     for name, tensor in tensor_operations().items():
         print_tensor(name, tensor)
+    print('\n')
 
-    print("--1.3--")
+    print("---1.3---")
     for name, tensor in indexing_and_slicing().items():
         print_tensor(name, tensor)
+    print('\n')
 
-    print("--1.4--")
+    print("---1.4---")
     for name, tensor in reshape_tensor().items():
         print_tensor(name, tensor)
+    print('\n')
 
 
 if __name__ == "__main__":
